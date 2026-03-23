@@ -1,0 +1,129 @@
+.section {
+  padding: var(--space-section) 0;
+  background: var(--color-bg);
+}
+
+.header {
+  max-width: 58ch;
+  margin-bottom: var(--space-3xl);
+}
+
+.kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-teal);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-md);
+}
+
+.lede {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-3xl);
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.rowReverse {
+  direction: rtl;
+}
+
+.rowReverse > * {
+  direction: ltr;
+}
+
+.copy h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  margin: 0 0 var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.copy p {
+  margin: 0;
+  color: var(--color-text-muted);
+  max-width: 48ch;
+}
+
+.meta {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.visual {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  transform: rotate(-0.6deg);
+}
+
+.visualAlt {
+  transform: rotate(0.8deg);
+}
+
+.visualInner {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.visualInner img {
+  transition: transform 0.45s var(--ease-out);
+}
+
+.visual:hover .visualInner img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .row,
+  .rowReverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: var(--space-xl);
+  }
+
+  .visual {
+    transform: none;
+  }
+
+  .visualAlt {
+    transform: none;
+  }
+}

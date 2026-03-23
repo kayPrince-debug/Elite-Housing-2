@@ -1,0 +1,140 @@
+.section {
+  padding: var(--space-section) 0;
+  background: linear-gradient(180deg, rgba(19, 22, 27, 0.65) 0%, rgba(9, 10, 12, 0.2) 100%);
+  border-top: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-teal);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+  margin: 0;
+  max-width: 18ch;
+}
+
+.controls {
+  display: inline-flex;
+  gap: var(--space-sm);
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out),
+    background 0.3s var(--ease-out);
+}
+
+.navBtn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navBtn:active {
+  transform: translateY(0);
+}
+
+.viewport {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.track {
+  display: flex;
+  transition: transform 0.55s var(--ease-out);
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  padding: var(--space-2xl);
+  box-sizing: border-box;
+}
+
+.quote {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.55;
+  margin: 0 0 var(--space-xl);
+  color: var(--color-text);
+  max-width: 62ch;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.name {
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.role {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.dots {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    transform 0.3s var(--ease-out),
+    background 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+}
+
+.dotActive {
+  background: var(--color-accent);
+  border-color: rgba(212, 165, 116, 0.65);
+  transform: scale(1.15);
+}
